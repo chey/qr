@@ -10,7 +10,7 @@ COPY . .
 
 RUN go test -v ./... &&  go build -v -ldflags "-s -w" -o /usr/local/bin/qr .
 
-FROM alpine
+FROM scratch
 
 COPY --from=0 /usr/local/bin/qr /usr/local/bin/
 
