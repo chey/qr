@@ -18,7 +18,7 @@ qr https://www.example.com
 
 ### Docker
 ```
-docker run ghcr.io/chey/qr https://www.example.com
+docker run --rm ghcr.io/chey/qr https://www.example.com
 ```
 
 ## Library usage
