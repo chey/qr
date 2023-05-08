@@ -10,10 +10,11 @@ A lightweight QR encoder CLI and library.
 
 ### Using GO
 ```shell
-go install github.com/chey/qr
+go install github.com/chey/qr@latest
 
 qr https://www.example.com
 ```
+<img width="598" alt="image" src="https://user-images.githubusercontent.com/152618/236930259-9e9ada28-362f-4e78-84e7-22ebc9f35d14.png">
 
 ## Library usage
 ```shell
