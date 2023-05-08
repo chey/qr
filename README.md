@@ -14,7 +14,7 @@ go install github.com/chey/qr@latest
 
 qr https://www.example.com
 ```
-<img width="598" alt="image" src="https://user-images.githubusercontent.com/152618/236930259-9e9ada28-362f-4e78-84e7-22ebc9f35d14.png">
+![image](https://user-images.githubusercontent.com/152618/236944628-d9d0b7d2-14f7-4f40-b1ee-fd5640b6264a.png)
 
 ## Library usage
 ```shell
