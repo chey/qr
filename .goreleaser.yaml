@@ -14,8 +14,6 @@ builds:
       - linux
       - windows
       - darwin
-    ldflags:
-      - -s -w
     ignore:
       - goos: darwin
         goarch: 386
