@@ -1,3 +1,5 @@
 qr
 *.png
 .build
+
+dist/
