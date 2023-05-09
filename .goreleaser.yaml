@@ -51,6 +51,9 @@ brews:
       owner: chey
       name: homebrew-tap
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
+    commit_author:
+      name: chey
+      email: chey@users.noreply.github.com
     homepage: https://github.com/chey/qr
     description: "A lightweight QR encoder"
 
