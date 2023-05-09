@@ -27,7 +27,7 @@ brew install chey/tap/qr
 ```
 
 ### Other
-See the [releases](releases) page for other downloads.
+See the [releases](https://github.com/chey/qr/releases) page for other downloads.
 
 ## Library usage
 ```shell
