@@ -52,8 +52,8 @@ brews:
     tap:
       owner: chey
       name: homebrew-tap
-      homepage: https://github.com/chey/qr
-      description: "A lightweight QR encoder"
+    homepage: https://github.com/chey/qr
+    description: "A lightweight QR encoder"
 
 # The lines beneath this are called `modelines`. See `:help modeline`
 # Feel free to remove those if you don't want/use them.
