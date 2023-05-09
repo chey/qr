@@ -21,6 +21,14 @@ qr https://www.example.com
 docker run --rm ghcr.io/chey/qr https://www.example.com
 ```
 
+### Brew
+```
+brew install chey/tap/qr
+```
+
+### Other
+See the [releases](releases) page for other downloads.
+
 ## Library usage
 ```shell
 go get [-u] github.com/chey/qr
