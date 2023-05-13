@@ -66,7 +66,9 @@ func (c *Code) Small(w io.Writer) {
 				writeString(w, upperHalfBlock)
 			}
 		}
-		writeString(w, newline)
+		if y < c.Size {
+			writeString(w, newline)
+		}
 	}
 }
 
@@ -81,13 +83,16 @@ func (c *Code) Big(w io.Writer) {
 				writeString(w, termWhite)
 			}
 		}
-		writeString(w, newline)
+		if y < c.Size {
+			writeString(w, newline)
+		}
 	}
 }
 
 // Print writes Code to os.Stdout
 func (c *Code) Print() {
 	c.Small(os.Stdout)
+	writeString(os.Stdout, newline)
 }
 
 // Image returns an image.Image

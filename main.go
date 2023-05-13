@@ -80,8 +80,10 @@ func execute(w io.Writer) error {
 		fmt.Fprintf(os.Stderr, "png written to \"%s\"\n", file)
 	} else if big {
 		qr.Big(w)
+		fmt.Fprintln(w)
 	} else {
 		qr.Small(w)
+		fmt.Fprintln(w)
 	}
 
 	return nil

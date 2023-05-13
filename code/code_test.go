@@ -33,6 +33,13 @@ func TestCodeSmall(t *testing.T) {
 	if buf.String() == "" {
 		t.Error("got empty code")
 	}
+
+	got := buf.Len()
+	want := 707
+
+	if buf.Len() != want {
+		t.Errorf("Buffer.Len() == %d, want = %d", got, want)
+	}
 }
 
 func TestCodeBig(t *testing.T) {
@@ -44,6 +51,13 @@ func TestCodeBig(t *testing.T) {
 
 	if buf.String() == "" {
 		t.Error("got empty code")
+	}
+
+	got := buf.Len()
+	want := 5841
+
+	if buf.Len() != want {
+		t.Errorf("Buffer.Len() == %d, want = %d", got, want)
 	}
 }
 
@@ -63,9 +77,24 @@ func TestCodePNG(t *testing.T) {
 }
 
 func TestCodePrint(t *testing.T) {
+	r, w, _ := os.Pipe()
+	orig := os.Stdout
+	os.Stdout = w
+	buf := make([]byte, 1024)
+
 	c, _ := New("chey", 0)
 
 	c.Print()
+	n, err := r.Read(buf)
+	if err != nil {
+		t.Error(err)
+	}
+	os.Stdout = orig
+
+	want := 708
+	if n != want {
+		t.Errorf("Print(chey) = %q, want = %q", n, want)
+	}
 }
 
 func TestCodeWriteStringPanic(t *testing.T) {
