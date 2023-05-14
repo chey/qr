@@ -19,6 +19,9 @@ builds:
         goarch: 386
       - goos: windows
         goarch: arm
+    ldflags:
+      - -s -w
+      - -X {{ .ModulePath }}/code.version={{ .Version }}
 
 archives:
   - format: tar.gz
