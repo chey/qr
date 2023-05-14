@@ -82,7 +82,7 @@ jobs:
           cache-to: type=gha,mode=max
           platforms: linux/amd64,linux/arm64
           build-args: |
-            VERSION=${{ env.DOCKER_METADATA_OUTPUT_VERSION }}
+            VERSION=${{ fromJSON(steps.meta.outputs.json).labels['org.opencontainers.image.version'] }}
 
 
       # Sign the resulting Docker image digest except on PRs.
