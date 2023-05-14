@@ -5,13 +5,16 @@ ifeq (, $(shell which golangci-lint))
 $(warning "could not find golangci-lint in $$(PATH), visit: https://golangci-lint.run/usage/install/ for more information")
 endif
 
-.PHONY: lint build install lib test test-lib clean
+.PHONY: docker lint build install lib test test-lib clean
 
 lint:
 	golangci-lint run ./...
 
 build: $(BUILD_DIR)/bin
 	go build -ldflags "$(LDFLAGS)" -o $</
+
+docker:
+	docker build -t qr .
 
 install:
 	go install -ldflags "$(LDFLAGS)"
