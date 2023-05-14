@@ -1,6 +1,6 @@
 package code
 
-var version = "0.1.0"
+var version = "dev"
 
 // Version returns version
 func Version() string {
