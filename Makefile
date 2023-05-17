@@ -14,7 +14,7 @@ build: $(BUILD_DIR)/bin
 	go build -ldflags "$(LDFLAGS)" -o $</
 
 docker:
-	docker build -t qr .
+	docker build -t qr --build-arg VERSION=docker .
 
 install:
 	go install -ldflags "$(LDFLAGS)"

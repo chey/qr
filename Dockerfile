@@ -10,7 +10,7 @@ RUN go mod download && go mod verify
 
 COPY . .
 
-RUN go test -v ./... &&  go build -v -ldflags "-s -w -X github.com/chey/qr/code.version=${VERSION/v/}" -o /usr/local/bin/qr .
+RUN go test -v ./... &&  go build -v -ldflags "-s -w -X $(go list -m)/code.version=${VERSION/v/}" -o /usr/local/bin/qr .
 
 FROM scratch
 
