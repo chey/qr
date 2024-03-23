@@ -50,7 +50,7 @@ changelog:
 brews:
   -
     name: qr
-    tap:
+    repository:
       owner: chey
       name: homebrew-tap
       token: "{{ .Env.TAP_GITHUB_TOKEN }}"
