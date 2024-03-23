@@ -2,6 +2,7 @@
 
 [![Docker](https://github.com/chey/qr/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/chey/qr/actions/workflows/docker-publish.yml)
 [![goreleaser](https://github.com/chey/qr/actions/workflows/goreleaser.yml/badge.svg)](https://github.com/chey/qr/actions/workflows/goreleaser.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/chey/qr/code.svg)](https://pkg.go.dev/github.com/chey/qr/code)
 
 A lightweight QR encoder CLI and library.
 
