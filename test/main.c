@@ -3,8 +3,8 @@
 #include <libqr.h>
 int main() {
     printf("Testing qr C library!\n");
-    printf("%s", qrCodeSmall("chey wuz here", 0));
-    printf("%s", qrCodeBig("chey wuz here", 0));
+    printf("%s\n", qrCodeSmall("chey wuz here", 0));
+    printf("%s\n", qrCodeBig("chey wuz here", 0));
 
     Png png = qrCodePng("chey wuz here", 0);
     printf("PNG Size: %d\n", png.n);
